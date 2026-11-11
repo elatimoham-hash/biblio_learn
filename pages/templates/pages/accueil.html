@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Accueil - BiblioLearn{% endblock %}
+{% block content %}
+<h2>Bienvenue sur {{ nom_projet }}</h2>
+<p>Plateforme de bibliothèque et de mini-cours en ligne.</p>
+<h3>Nos modules</h3>
+<ul>
+{% for module in modules %}
+<li>{{ module }}</li>
+{% endfor %}
+</ul>
+{% endblock %}

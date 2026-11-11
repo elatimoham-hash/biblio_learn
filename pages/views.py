@@ -1,8 +1,8 @@
 from django.shortcuts import render
 
-# Create your views here.
-
-from django.http import HttpResponse
-
 def accueil(request):
-	return HttpResponse("<h1>Bienvenue sur BiblioLearn</h1>")
+	contexte = {
+		"nom_projet": "BiblioLearn",
+		"modules": ["Catalogue", "Comptes et rôles", "Emprunts", "Mini-cours"],
+	}
+	return render(request, "pages/accueil.html", contexte)

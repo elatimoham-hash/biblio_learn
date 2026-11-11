@@ -40,6 +40,15 @@ INSTALLED_APPS = [
 "pages", # <-- à ajouter
 ]
 
+TEMPLATES = [
+{
+"BACKEND": "django.template.backends.django.DjangoTemplates",
+"DIRS": [BASE_DIR / "templates"], # <-- à modifier
+"APP_DIRS": True,
+# ... (le reste ne change pas)
+},
+]
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -55,7 +64,7 @@ ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
